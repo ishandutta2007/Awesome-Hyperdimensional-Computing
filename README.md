@@ -15,7 +15,10 @@ The algorithmic framework governing vector symbolic architectures has transition
 
 
 ```mermaid
-[Symbolic Connectionism (Kanerva, 1988)] ───> [Vector Symbolic Architectures (VSAs)] ───> [Hardware-Fused TinyML HDC] ───> [Unified Foundation Hybrid Enclaves](Sparse Distributed Memory Bases)             (Algebraic Vector Primitive Formulation)        (Ultra-Low Power Edge Silicon Circuits)      (Low-Rank Latent Hypervector Routing)
+flowchart LR
+    A["Symbolic Connectionism (Kanerva, 1988)<br>(Sparse Distributed Memory Bases)"] --> B["Vector Symbolic Architectures (VSAs)<br>(Algebraic Vector Primitive Formulation)"]
+    B --> C["Hardware-Fused TinyML HDC<br>(Ultra-Low Power Edge Silicon Circuits)"]
+    C --> D["Unified Foundation Hybrid Enclaves<br>(Low-Rank Latent Hypervector Routing)"]
 ```
 
 
@@ -61,7 +64,15 @@ To classify unstructured incoming inputs, the HDC architecture routes features t
 
 
 ```mermaid
-The HDC Edge-Inference Processing Loop[Raw Analog Sensory Input] ───> [Continuous Mapping Encoder] ───> [Generate Query Hypervector H_q]│(Calculate Cosine / Hamming Distance)│▼[Trigger Decentralized Actuation] <── [Select Peak Class Match] <── [Query Associative Codebook Matrix]
+flowchart TB
+    subgraph "The HDC Edge-Inference Processing Loop"
+        direction TB
+        A["Raw Analog Sensory Input"] --> B["Continuous Mapping Encoder"]
+        B --> C["Generate Query Hypervector H_q"]
+        C -- "(Calculate Cosine / Hamming Distance)" --> D["Query Associative Codebook Matrix"]
+        D --> E["Select Peak Class Match"]
+        E --> F["Trigger Decentralized Actuation"]
+    end
 ```
 
 
