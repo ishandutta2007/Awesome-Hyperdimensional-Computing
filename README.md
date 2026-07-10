@@ -1,5 +1,8 @@
-# Awesome-Hyperdimensional-Computing
-## Hyperdimensional Computing (HDC) in AI: History, Progression, Variants, & Applications
+# 🚀 Awesome-Hyperdimensional-Computing
+
+![Banner](assets/banner.svg)
+
+## 🧠 Hyperdimensional Computing (HDC) in AI: History, Progression, Variants, & Applications
 
 **Hyperdimensional Computing (HDC)**—formally designated as Vector Symbolic Architectures (VSA)—is an alternative, brain-inspired computational paradigm and non-von Neumann cognitive framework that represents and processes data using very large, high-dimensional, and random vectors (typically $d \ge 10,000$ dimensions). Grounded in the mathematical properties of high-dimensional spaces, HDC models information processing using the geometry of hyper-spaces rather than traditional numerical weights or localized pixel matrices. 
 
@@ -7,7 +10,7 @@ In standard deep connectionist neural networks, knowledge is distributed across 
 
 ---
 
-## 1. The Macro Chronological Evolution
+## ⏳ 1. The Macro Chronological Evolution
 
 The algorithmic framework governing vector symbolic architectures has transitioned from symbolic connectionist theory to distributed continuous representations, edge-device classifier accelerators, and modern multi-modal foundation embedding fusions.
 
@@ -32,7 +35,7 @@ flowchart LR
 
 ---
 
-## 2. Core Algebraic Primitives & Operators
+## 🧮 2. Core Algebraic Primitives & Operators
 
 The entire computational fabric of Hyperdimensional Computing is structured around three non-destructive, element-wise geometric transformations over a hypersphere.
 
@@ -44,7 +47,7 @@ The entire computational fabric of Hyperdimensional Computing is structured arou
 
 ---
 
-## 3. The Hyperdimensional Vector-Inversion Pipeline
+## 🔄 3. The Hyperdimensional Vector-Inversion Pipeline
 
 To classify unstructured incoming inputs, the HDC architecture routes features through an online encoding matrix before checking similarity against localized associative class memories.
 
@@ -69,7 +72,7 @@ flowchart TB
 
 ---
 
-## 4. Production Engineering Challenges & Edge Silicon Mitigations
+## ⚙️ 4. Production Engineering Challenges & Edge Silicon Mitigations
 
 Deploying hyperdimensional computing grids across commercial edge devices or distributed cloud frameworks introduces critical hardware routing and capacity bottlenecks.
 
@@ -80,7 +83,7 @@ Deploying hyperdimensional computing grids across commercial edge devices or dis
 
 ---
 
-## 5. Frontier Real-World AI Industrial Applications
+## 🌍 5. Frontier Real-World AI Industrial Applications
 
 | Application | Details | Year First Used | Paper |
 | --- | --- | --- | --- |
@@ -90,7 +93,7 @@ Deploying hyperdimensional computing grids across commercial edge devices or dis
 
 ---
 
-## References
+## 📚 References
 1. Kanerva, P. (1988). *Sparse distributed memory*. MIT Press.
 2. Plate, T. A. (1995). Holographic reduced representations. *IEEE Transactions on Neural Networks*, 6(3), 623-641.
 3. Gayler, R. W. (2003). Vector symbolic architectures are a desirable framework for artificial general intelligence. *arXiv preprint arXiv:cs/0312013*.
