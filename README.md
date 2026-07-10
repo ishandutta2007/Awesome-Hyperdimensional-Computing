@@ -23,17 +23,12 @@ flowchart LR
 
 
 
-*   **The Sparse Distributed Memory Genesis (Kanerva, 1988)**
-    *   *Concept:* The theoretical genesis formulated by Pentti Kanerva. He demonstrated that the human brain operates over a mathematical coordinate structure where the distance between concept vectors dictates cognitive association. Kanerva's **Sparse Distributed Memory (SDM)** proved that very long, random binary vectors display unique statistical properties: any two randomly chosen vectors are mathematically orthogonal with near $100\%$ probability, providing an infinite, noise-resilient storage substrate.
-    *   *Limitation:* Confined to theoretical cognitive physics, lacking the necessary tensor processing primitives to map structured real-world machine learning benchmarks.
-*   **The Vector Symbolic Architecture Formulations (~1990s–2010s)**
-    *   *Concept:* Ported high-dimensional spaces into functional computing operations by introducing explicit vector-algebra primitives. Frameworks like Tony Plate's Holographic Reduced Representations (HRU) and Ross Gayler's VSAs defined exact, reversible algebraic operators—specifically **Binding and Bundling**—allowing models to dynamically pack complex hierarchical data types (like full database schemas or language sentence trees) into a single hypervector while preserving structural integrity.
-*   **The Hardware-Fused TinyML Edge Era (~2018–2024)**
-    *   *Concept:* Scaled up HDC to address the severe energy-consumption bottlenecks of traditional deep learning on edge devices. Because HDC operations rely entirely on element-wise binary (XOR), bipolar, or integer addition math rather than floating-point matrix multiplications, hardware engineers compiled HDC loops straight into **Processing-in-Memory (PIM) and Neuromorphic chipsets**.
-    *   *Significance:* Delivered an instantaneous $100\times$ to $1000\times$ energy efficiency leap over deep CNN benchmarks, allowing miniature drones and medical wearables to execute real-time gesture and visual classification with micro-watt power budgets.
-*   **The Foundational Multi-Modal Hybrid Enclave Era (~2025–Present)**
-    *   *Concept:* The current modern state-of-the-art frontier standard. It merges the perceptual capacity of ultra-large **Foundation Models** with the hard reasoning, reasoning tokens, and zero-shot efficiency of HDC matrices [INDEX: 1, 18, 21].
-    *   *Significance:* Advanced multi-modal transformers (like CLIP or Llama backbones) act as the frontend perceptual encoders, compressing high-resolution pixels or multilingual strings into dense, continuous embedding spaces [INDEX: 10]. These latent arrays are up-projected into overcomplete $10,000+$ dimension hypervector enclaves where HDC operators execute fast, symbolic, and fully transparent reasoning, tool-calling routing, and process-supervised validation loops natively [INDEX: 12, 16].
+| Evolution Phase | Details | Year First Used | Paper |
+| --- | --- | --- | --- |
+| [The Sparse Distributed Memory Genesis](details/sparse_distributed_memory_genesis.md) | **Concept:** Theoretical genesis formulated by Pentti Kanerva...<br>**Limitation:** Confined to theoretical cognitive physics... | 1988 | [Kanerva (1988)](https://mitpress.mit.edu/9780262111324/) |
+| [The Vector Symbolic Architecture Formulations](details/vector_symbolic_architecture.md) | **Concept:** Ported high-dimensional spaces into functional computing... | 1995 | [Plate (1995)](https://ieeexplore.ieee.org/document/371545) |
+| [The Hardware-Fused TinyML Edge Era](details/hardware_fused_tinyml.md) | **Concept:** Scaled up HDC to address energy-consumption...<br>**Significance:** Delivered instantaneous energy efficiency leap... | 2016 | [Rahimi et al. (2016)](https://ieeexplore.ieee.org/document/7544326) |
+| [The Foundational Multi-Modal Hybrid Enclave Era](details/foundational_hybrid_enclave.md) | **Concept:** Modern state-of-the-art frontier standard...<br>**Significance:** Advanced multi-modal transformers... | 2025 | [DeepSeek-AI (2025)](https://github.com/deepseek-ai) |
 
 ---
 
@@ -41,20 +36,11 @@ flowchart LR
 
 The entire computational fabric of Hyperdimensional Computing is structured around three non-destructive, element-wise geometric transformations over a hypersphere.
 
-- ### A. Bundling / Addition (Element-wise Summation)
-	*   **Mechanism:** Combines multiple hypervectors into a single coordinate point by executing basic vector addition followed by a majority-vote normalization step:
-	    $$H_{\text{bundle}} = \text{sign}\left( X_1 + X_2 + \dots + X_k \right)$$
-	*   **Behavior:** Implements the mathematical representation of a **Set**. The output vector remains highly correlated with all its constituent parent vectors, preserving a geometric memory of all member features.
-
-- ### B. Binding / Multiplication (Element-wise XOR / Hadamards)
-	*   **Mechanism:** Pairs two independent hypervectors together to map a key-value relationship or variable-value binding using element-wise multiplication:
-	    $$H_{\text{bound}} = X \otimes Y \quad \text{or} \quad H_{\text{bound}} = X \oplus Y \ (\text{for Binary XOR})$$
-	*   **Behavior:** Implements structural variable mapping. Crucially, the output vector is **orthogonal** to both $X$ and $Y$, hiding the input identities until an explicit un-binding operation is applied by multiplying the inverse matrix: $X = H_{\text{bound}} \otimes Y^{-1}$.
-
-- ### C. Permutation / Rotation (Shifting Operators)
-	*   **Mechanism:** Introduces strict chronological order, sequence alignment, and spatial geometry by applying a cyclic component shift (rotation) to the hypervector dimensions:
-	    $$H_{\text{permuted}} = \rho(X)$$
-	*   **Behavior:** Encodes sequences natively. Because $\rho(X)$ is orthogonal to $X$, rotating a vector repeatedly allows the system to store long-context variable strings or chronological trajectories without data overwriting.
+| Primitive | Details | Year First Used | Paper |
+| --- | --- | --- | --- |
+| [Bundling / Addition](details/bundling_addition.md) | **Mechanism:** Combines multiple hypervectors...<br>**Behavior:** Implements the mathematical representation of a Set... | 1988 | [Kanerva (1988)](https://mitpress.mit.edu/9780262111324/) |
+| [Binding / Multiplication](details/binding_multiplication.md) | **Mechanism:** Pairs two independent hypervectors together...<br>**Behavior:** Implements structural variable mapping... | 1995 | [Plate (1995)](https://ieeexplore.ieee.org/document/371545) |
+| [Permutation / Rotation](details/permutation_rotation.md) | **Mechanism:** Introduces strict chronological order...<br>**Behavior:** Encodes sequences natively... | 1995 | [Plate (1995)](https://ieeexplore.ieee.org/document/371545) |
 
 ---
 
@@ -76,10 +62,10 @@ flowchart TB
 ```
 
 
-*   **Continuous Mapping Encoders**
-    *   *Profile:* Coordinates dimensionality projection. Small random projection matrices or scalar quantization grids map raw sensory dimensions (like pixel channels or acoustic signals) up into the targeted $10,000+$ hyperdimensional length.
-*   **Associative Memory Codebooks**
-    *   *Profile:* Hardware-fused classification lookup. It acts as an immutable dictionary holding a single canonical master hypervector per target class. When an unknown query hypervector enters the core, the codebook runs parallel, single-pass Hamming or Cosine distance dot products to isolate the class match instantly, bypassing multi-layer backpropagation checks.
+| Component | Details | Year First Used | Paper |
+| --- | --- | --- | --- |
+| [Continuous Mapping Encoders](details/continuous_mapping_encoders.md) | **Profile:** Coordinates dimensionality projection... | 2016 | [Rahimi et al. (2016)](https://ieeexplore.ieee.org/document/7544326) |
+| [Associative Memory Codebooks](details/associative_memory_codebooks.md) | **Profile:** Hardware-fused classification lookup... | 1988 | [Kanerva (1988)](https://mitpress.mit.edu/9780262111324/) |
 
 ---
 
@@ -87,23 +73,20 @@ flowchart TB
 
 Deploying hyperdimensional computing grids across commercial edge devices or distributed cloud frameworks introduces critical hardware routing and capacity bottlenecks.
 
-*   **The Dimensionality Scalability and Memory Bus Width Barrier**
-    *   *The Problem:* Because HDC requires every single data token or concept to be hosted within an immense $10,000+$ element vector array, streaming these colossal arrays continually across traditional von Neumann CPU architectures chokes the local system memory bus. The processor spends too much time fetching vector blocks from standard RAM to compute cache, bottlenecking generation velocity.
-    *   *Mitigation:* Transitioning hardware execution away from standard registers toward **Processing-in-Memory (PIM) and Static RAM (SRAM) crossbar arrays**, computing the binary element-wise XOR and bundling steps natively inside the physical memory cells themselves to bypass data transit latencies.
-*   **The Hyperdimensional Capacity Saturation and Crosstalk Crisis**
-    *   *The Problem:* When bundling (adding) too many independent variables or text strings into a single shared hypervector set, the cumulative noise level climbs. The vector dimensions saturate, triggering a severe **Crosstalk Interference Penalty** where the system can no longer successfully un-bind or decode parent elements, dropping classification accuracy.
-    *   *Mitigation:* Implementing **Sparsification and Nonlinear Cleanup Schedulers**, projecting continuous hypervectors onto sparse binary fields while utilizing specialized Hopfield Network clean-up loops to scrub background interference noise.
+| Challenge | Details | Year First Used | Paper |
+| --- | --- | --- | --- |
+| [Memory Bus Width Barrier](details/memory_bus_width.md) | **Problem:** Chokes the local system memory bus...<br>**Mitigation:** Processing-in-Memory (PIM)... | 2020 | [Karunaratne et al. (2020)](https://www.nature.com/articles/s41928-020-0410-3) |
+| [Crosstalk Crisis](details/crosstalk_crisis.md) | **Problem:** Vector dimensions saturate...<br>**Mitigation:** Sparsification and Nonlinear Cleanup Schedulers... | 2003 | [Gayler (2003)](https://arxiv.org/abs/cs/0312013) |
 
 ---
 
 ## 5. Frontier Real-World AI Industrial Applications
 
-*   **Ultra-Low-Power TinyML Bio-Medical Gesture Classification**
-    *   *Application:* Powers next-generation smart prosthetic limbs and wearable cardiac monitoring arrays. Quantized binary HDC architectures ingest continuous high-frequency electromyography (EMG) or EEG signals; on-chip PIM crossbars execute element-wise binding and bundling steps natively to decode human movement gestures with micro-watt power consumption.
-*   **Decentralized Offline Robotics Localization & Navigation (Sim-to-Real)**
-    *   *Application:* Drives edge computing stacks for autonomous field drones, factory humanoid joints, and localized robotic rigs. Spatial mapping permutation operators compress raw LiDAR points and ego-motion trajectories into flat, unified hypervectors, letting the drone maintain full spatial awareness and location tracking zero-shot without connectivity.
-*   **High-Volume Enterprise Cyber-Security Log Anomaly Screening**
-    *   *Application:* Screens millions of high-frequency cloud transaction footprints and system network interactions continuously. HDC encoders map real-time system call configurations into dense hyperspaces; the associative memory matrix compares the inputs against verified standard behavior vectors, instantly flagging or blocking a coordinated cyber-attack if a vector maps to an un-indexed, orthogonal outlier coordinate.
+| Application | Details | Year First Used | Paper |
+| --- | --- | --- | --- |
+| [Bio-Medical Gesture Classification](details/biomedical_gesture.md) | **Application:** Powers next-generation smart prosthetic limbs... | 2016 | [Rahimi et al. (2016)](https://ieeexplore.ieee.org/document/7544326) |
+| [Robotics Localization & Navigation](details/robotics_localization.md) | **Application:** Drives edge computing stacks for drones... | 2020 | [Karunaratne et al. (2020)](https://www.nature.com/articles/s41928-020-0410-3) |
+| [Cyber-Security Log Anomaly Screening](details/cyber_security_anomaly.md) | **Application:** Screens high-frequency cloud transaction footprints... | 2009 | [Kanerva (2009)](https://link.springer.com/article/10.1007/s12559-009-9009-8) |
 
 ---
 
